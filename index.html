@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <title>Vue - Todo List</title>
 
-    <!-- CSS, FontAwesome, Vue, Axios -->
+    <!-- CSS,FontAwesome,Vue,Axios -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-    <!-- /Librerie -->
-
+    <!-- /Fine Librerie -->
 
   </head>
   <body>
@@ -19,22 +18,14 @@
         <!-- Contenuto del sito -->
         <div class="content">
 
-
-          <!-- Logo -->
-          <!-- <img class="img-logo"src="./img/logo.png" alt="Logo"> -->
-
-          <!-- Inserimento voce elenco -->
-          <div class="box-insert">
-            <input @keyup.enter="pushElement" v-model="inputAttivita" placeholder="Nuovo Todo">
-            <button @click="pushElement"> Aggiungi</button>
-          </div>
-
+          <h1>Lista Email Random</h1>
 
           <!-- Lista todo -->
           <div class="box-todolist bg-grey">
             <ul class="todolist">
+              <h2>Libreria Vue axios</h2>
               <!-- Riga della lista -->
-              <li v-for="(att,indexList) in listaTodo" class="todo-element" >
+              <li v-for="(att,indexList) in listaEmail" class="todo-element" >
                 <!-- Testo -->
                 <div class="li-text">
                   <span >{{att}}</span>
