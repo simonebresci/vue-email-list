@@ -1,16 +1,8 @@
-// Proseguendo l'esercitazione (snackone) in classe, creare una todolist dove l'utente potrà:
-// scrivere in un input
-// premendo invio nell'input oppure cliccando sul submit, salvare nella lista la nuova nota
-// visualizzare tutte le note nel box sottostante
-// cancellare la nota, cliccando sulla X corrispondente
-// Bonus:
-// lavorate lato CSS, per rendere la todolist più carina seguendo la vostra creatività.
-// Vi lascio un esempio di todolist.
-// Buon divertimento branco!
+/* Eseguire in Vue.js una chiamata ajax, generare 10 email e stamparle a schermo.
+La chiamata ajax vi ritornerà ogni volta un'email random.
+Endpoint: https://flynn.boolean.careers/exercises/api/random/mail
+Buon lavoro, branco! */
 
-
-// Todo:
-// - non accettare input vuoto
 
 
 
@@ -19,6 +11,16 @@ var app = new Vue ({
   data: {
     listaTodo: ['Fare i compiti', 'Fare la spesa', 'Fare il bucato'],
     inputAttivita: ''
+  },
+  mounted() {
+    // alert('Eseguo axios nel mounted');
+
+    axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(function(objReceived){
+           // alert('sono nel then');
+           const result = objReceived.data.response;
+           console.log(result);
+         });
+
   },
   methods : {
     pushElement: function (){
